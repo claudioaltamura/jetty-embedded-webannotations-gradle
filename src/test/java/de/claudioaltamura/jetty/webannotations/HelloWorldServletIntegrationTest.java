@@ -1,4 +1,4 @@
-package de.claudioaltamura.jetty.annotations;
+package de.claudioaltamura.jetty.webannotations;
 
 import static org.junit.Assert.assertEquals;
 
