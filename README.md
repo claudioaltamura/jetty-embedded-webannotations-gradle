@@ -1,2 +1,17 @@
-# jetty-embedded-webannotations-gradle
-Example showing web annotations in a without war scenario with gradle
+async servlets examples
+=======================
+
+Projects shows jetty embedded configuration for servlet web annotations.
+
+Quick Start
+-----------
+
+	./gradlew appRun
+
+Open your web browser to
+
+	http://localhost:8080/helloworld
+
+Check out test
+
+	HelloWorldIntegrationTest.java
