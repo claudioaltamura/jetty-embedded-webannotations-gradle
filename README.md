@@ -1,5 +1,5 @@
-async servlets examples
-=======================
+jetty embeded webannotation servlets
+====================================
 
 Projects shows jetty embedded configuration for servlet web annotations.
 
