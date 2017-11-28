@@ -36,17 +36,20 @@ public class JettyServer {
 		webAppContext.setContextPath("/");
 		String webxmlLocation = JettyServer.class.getResource("/webapp/WEB-INF/web.xml").toString();
 		webAppContext.setDescriptor(webxmlLocation);
+
 		String resLocation = JettyServer.class.getResource("/webapp").toString();
 		webAppContext.setResourceBase(resLocation);
+
 		webAppContext.setParentLoaderPriority(true);
+
 		webAppContext.getMetaData().addContainerResource(Resource.newResource(
 				new File(JettyServer.class.getProtectionDomain().getCodeSource().getLocation().getPath())));
 
 		webAppContext.setConfigurations(new Configuration[] { new WebInfConfiguration(), new WebXmlConfiguration(),
 				new MetaInfConfiguration(), new FragmentConfiguration(), new EnvConfiguration(),
 				new PlusConfiguration(), new AnnotationConfiguration(), new JettyWebXmlConfiguration() });
-		server.setHandler(webAppContext);
 
+		server.setHandler(webAppContext);
 		server.start();
 	}
 
