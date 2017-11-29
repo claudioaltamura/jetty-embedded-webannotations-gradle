@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
@@ -31,7 +32,12 @@ public class HelloWorldServlet extends HttpServlet {
 	{
 		LOG.info("bye bye!");
 	}
-	
+
+	@Override
+	public void init(ServletConfig servletConfig) throws ServletException {
+		super.init(servletConfig);
+	}
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -41,7 +47,7 @@ public class HelloWorldServlet extends HttpServlet {
 			throw new ServletException();
 		}
 		String result = name != null ? name : "World";
-		response.getWriter().print("Hello " + result + "!");
+		response.getOutputStream().println("Hello " + result + "!");
 	}
 
 }

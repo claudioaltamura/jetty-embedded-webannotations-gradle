@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 @WebListener
 public class HelloWorldServletContextListener implements ServletContextListener {
 
-
 	private static final Logger LOG = LoggerFactory.getLogger(HelloWorldServletContextListener.class);
 
 	@Override
