@@ -12,6 +12,7 @@ Open your web browser to
 
 	http://localhost:8080/helloworld
 
-Check out test
+Check out the tests
 
-	HelloWorldIntegrationTest.java
+	HelloWorldServletTest.java
+	HelloWorldServletIntegrationTest.java

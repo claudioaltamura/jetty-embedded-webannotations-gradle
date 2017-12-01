@@ -1,10 +1,7 @@
 package de.claudioaltamura.jetty.webannotations;
 
-import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
-
-import java.io.PrintWriter;
-import java.io.StringWriter;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletOutputStream;
