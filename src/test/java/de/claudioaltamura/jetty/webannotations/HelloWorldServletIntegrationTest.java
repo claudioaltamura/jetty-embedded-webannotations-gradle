@@ -38,6 +38,6 @@ public class HelloWorldServletIntegrationTest {
 
 		CloseableHttpResponse response = httpClient.execute(request);
 		String responseAsString = EntityUtils.toString(response.getEntity());
-		assertEquals("Hello World!", responseAsString);
+		assertEquals("Hello World!", responseAsString.trim());
 	}
 }
