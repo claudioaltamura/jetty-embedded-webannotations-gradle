@@ -1,3 +1,5 @@
+https://travis-ci.org/claudioaltamura/jetty-embedded-webannotations-gradle.svg?branch=master
+
 jetty embeded webannotation servlets
 ====================================
 
