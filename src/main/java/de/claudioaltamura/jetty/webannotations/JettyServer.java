@@ -2,8 +2,6 @@ package de.claudioaltamura.jetty.webannotations;
 
 import java.io.File;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.eclipse.jetty.annotations.AnnotationConfiguration;
 import org.eclipse.jetty.plus.webapp.EnvConfiguration;
 import org.eclipse.jetty.plus.webapp.PlusConfiguration;
@@ -16,10 +14,12 @@ import org.eclipse.jetty.webapp.MetaInfConfiguration;
 import org.eclipse.jetty.webapp.WebAppContext;
 import org.eclipse.jetty.webapp.WebInfConfiguration;
 import org.eclipse.jetty.webapp.WebXmlConfiguration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class JettyServer {
 
-	private static final Log log = LogFactory.getLog(JettyServer.class);
+	private static final Logger LOG = LoggerFactory.getLogger(JettyServer.class);
 
 	private Server server;
 	private int port;
@@ -30,7 +30,7 @@ public class JettyServer {
 
 	public void start() throws Exception {
 		server = new Server(port);
-		server.addBean(log);
+		server.addBean(LOG);
 
 		WebAppContext webAppContext = new WebAppContext();
 		webAppContext.setContextPath("/");
